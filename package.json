@@ -1,0 +1,20 @@
+{
+  "name": "project-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build -i ./src/styles.css -o public/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "browserslist": "^4.23.0",
+    "caniuse-lite": "^1.0.30001623"
+  }
+}
