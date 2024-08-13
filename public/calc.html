@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .calculator {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+        /* width: 100%;
+        height: 100%; */
+      }
+
+      .display {
+        background-color: #b2b15f;
+        height: 50px;
+        width: 210px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: right;
+        padding: 10px;
+        font-size: 24px;
+        color: #333;
+
+        align-items: center;
+        justify-content: end;
+      }
+
+      .button {
+        width: 50px;
+        height: 50px;
+        background-color: #333; /* Dark grey background */
+        border: none;
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3),
+          /* Bottom shadow */ 0px -2px 4px rgba(255, 255, 255, 0.2),
+          /* Top light shadow */ inset 0px 1px 2px rgba(0, 0, 0, 0.5); /* Inner shadow */
+        color: white; /* White text color */
+        font-size: 18px; /* Font size for numbers */
+        text-align: center; /* Center text */
+        line-height: 50px; /* Vertically center text */
+        margin: 5px; /* Margin between buttons */
+        cursor: pointer;
+      }
+
+      .button-row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .button.double {
+        width: 110px; /* Double width for "00" button */
+      }
+
+      .button.equal {
+        background-color: #1976d2; /* Blue background for "=" button */
+      }
+
+      .button.clear {
+        background-color: #d32f2f; /* Red background for "AC" and "DEL" buttons */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display flex flex-col gap-4">
+        <div id="calc">0</div>
+        <div id="answer"></div>
+      </div>
+
+      <div class="button-row">
+        <button onclick="calculate('')" class="button clear">AC</button>
+        <button onclick="calculate('erase')" class="button clear">DEL</button>
+        <button onclick="calculate('/')" class="button">/</button>
+        <button onclick="calculate('*')" class="button">*</button>
+      </div>
+      <div class="button-row">
+        <button onclick="calculate('7')" class="button">7</button>
+        <button onclick="calculate('8')" class="button">8</button>
+        <button onclick="calculate('9')" class="button">9</button>
+        <button onclick="calculate('-')" class="button">-</button>
+      </div>
+      <div class="button-row">
+        <button onclick="calculate('4')" class="button">4</button>
+        <button onclick="calculate('5')" class="button">5</button>
+        <button onclick="calculate('6')" class="button">6</button>
+        <button onclick="calculate('+')" class="button">+</button>
+      </div>
+      <div class="button-row">
+        <button onclick="calculate('1')" class="button">1</button>
+        <button onclick="calculate('2')" class="button">2</button>
+        <button onclick="calculate('3')" class="button">3</button>
+        <button onclick="calculate('ev')" class="button equal">=</button>
+      </div>
+      <div class="button-row">
+        <button onclick="calculate('00')" class="button double">00</button>
+        <button onclick="calculate('0')" class="button">0</button>
+        <button onclick="calculate('.')" class="button">.</button>
+      </div>
+    </div>
+
+    <script>
+      let calculation = JSON.parse(localStorage.getItem("calculated")) || 0;
+      document.getElementById("calc").innerHTML = calculation;
+      calculation = "";
+      let resultEvaluated = false;
+      // console.log(calculation);
+
+      function calculate(numValue) {
+        if (numValue === "") {
+          calculation = "";
+          // console.log("0");
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = 0;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "ev") {
+          eval(calculation);
+          calculation = eval(calculation);
+          // console.log(calculation);
+
+          document.getElementById("answer").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "15px";
+          document.getElementById("answer").style.fontSize = "24px";
+
+          localStorage.setItem("calculated", JSON.stringify(calculation));
+          calculation = "";
+          resultEvaluated = true; // Mark that result has been evaluated
+          console.log("eval");
+          // console.log(calculation);
+        } else if (numValue === ".") {
+          calculation += ".";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "0") {
+          calculation += "0";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "00") {
+          calculation += "00";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "+") {
+          calculation += " + ";
+          console.log("+");
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+        } else if (numValue === "3") {
+          calculation += "3";
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+          // console.log(calculation);
+        } else if (numValue === "2") {
+          calculation += "2";
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+          // console.log(calculation);
+        } else if (numValue === "1") {
+          calculation += "1";
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+          // console.log(calculation);
+        } else if (numValue === "-") {
+          calculation += " - ";
+          // console.log("-");
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+        } else if (numValue === "6") {
+          calculation += "6";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "5") {
+          calculation += "5";
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+
+          // console.log(calculation);
+        } else if (numValue === "4") {
+          calculation += "4";
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+
+          // console.log(calculation);
+        } else if (numValue === "/") {
+          calculation += " / ";
+          console.log("/");
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+        } else if (numValue === "*") {
+          calculation += " * ";
+          console.log("*");
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+        } else if (numValue === "9") {
+          calculation += "9";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "8") {
+          calculation += "8";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "7") {
+          calculation += "7";
+          // console.log(calculation);
+          document.getElementById("calc").innerHTML = calculation;
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        } else if (numValue === "erase") {
+          // Check if the last character is a space (indicating an operator)
+          if (calculation.slice(-1) === " ") {
+            // Remove the last 3 characters (space, operator, space)
+            calculation = calculation.slice(0, -3);
+          } else {
+            // Otherwise, remove only the last character
+            calculation = calculation.slice(0, -1);
+          }
+
+          // If calculation becomes empty after deletion, display 0
+          if (calculation === "") {
+            document.getElementById("calc").innerHTML = 0;
+          } else {
+            document.getElementById("calc").innerHTML = calculation;
+          }
+          document.getElementById("calc").style.fontSize = "24px";
+          document.getElementById("answer").style.fontSize = "15px";
+          resultEvaluated = false;
+        }
+
+        // If the previous calculation was evaluated and the user is inputting an operator
+        else {
+          if (resultEvaluated && isNaN(numValue)) {
+            alert("eval");
+          }
+        }
+        //   resultEvaluated = false;
+        //   calculation += ` ${numValue} `;
+        // } else if (resultEvaluated) {
+        //   // If the previous calculation was evaluated and the user is inputting a number
+        //   calculation = numValue;
+        //   resultEvaluated = false;
+        // }
+      }
+
+      // function eventClick(event) {
+      //   console.log(calculation);
+      //   document.getElementById("calc").innerHTML = calculation += "4";
+      // }
+    </script>
+  </body>
+</html>

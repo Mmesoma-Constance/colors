@@ -4,27 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPECS</title>
     <link rel="stylesheet" href="output.css" />
-    <style>
-    .aboutImg {
-      border-top-left-radius: 100px;
-    }
-
-    .vanillaBg {
-     background-color: #f9dbba;
-    }
-    .tryBg {
-      background: rgb(236, 198, 157);
-    }
-    </style>
+  <link rel="stylesheet" href="shade.css">
   </head>
   <body>
     <div class="overflow-hidden">
-      <header class="bg-amber-600 p-6 px-10 bg-opacity-65 h-[650px]">
+      <header class="bg-amber-600 py-4 p-4  md:py-6 md:p-6  px-10 bg-opacity-60 md:bg-opacity-65 h-[650px]">
         <nav class="flex flex-row justify-between items-center w-full">
           <span class="">
             <h1 class="font-mono text-[28px] tracking-wide uppercase bg-transparent">SPECS</h1>
           </span>
-          <span class="">
+          <span class="hidden lg:flex">
             <ul class="flex flex-row gap-5 uppercase">
               <li class="cursor-pointer">HOME</li>
               <li class="cursor-pointer">About</li>
@@ -36,7 +25,7 @@
           <span class="">
             <ul class="flex gap-4">
               <li class="text-[25px] cursor-pointer">🛒</li>
-              <li class="">
+              <li class="hidden md:flex">
                 <button class="border border-black hover:bg-black hover:text-white transition-all p-2 px-8">LOGIN</button>
               </li>
             </ul>
@@ -44,26 +33,28 @@
         </nav>
 
         <div
-          class="mt-14 flex flex-col md:flex-row gap-24 justify-center items-center"
+          class="mt-24 md:mt-14 flex flex-col md:flex-row gap-24 justify-center items-center"
         >
-          <div class="w-[450px] items-center space-y-3">
-            <h1 class="text-6xl font-semibold font-sans">
+          <div class="w-full md:w-[450px] items-center space-y-3">
+            <h1 class="text-4xl md:text-[45px] lg:text-6xl font-semibold font-sans">
               Find The Best Fashion Frame <br> For You
             </h1>
-            <p class="">
+            <p class="text-white md:text-black">
               <p class="">Step into a world of style and luxury. </p>
-              Your destination for stylish, high quality and affordable eyeglasses for every occasion. Discover
+            <span class="">
+               Your destination for stylish, high quality and affordable eyeglasses for every occasion. Discover
               your perfect pair today!
+            </span> 
             </p>
             <button class="bg-black p-2.5 mt-2 px-10 text-white">
               <span class="text-sm">SHOP NOW</span>
             </button>
           </div>
 
-          <div class="">
+          <div class="absolute -z-10 top-16 md:relative md:-z-0 md:top-0">
             <img
               src="images/shades (6).jpg"
-              class="h-[480px] w-[530px] rounded-bl-full object-fit shadow-xl"
+              class="h-[550px] md:h-[480px] w-[530px] rounded-bl-full object-fit shadow-xl opacity-70 md:opacity-100"
               alt=""
             />
             <!--------rounded-bl-3xl shadow-xl rounded-full---------->
@@ -74,13 +65,13 @@
 
 <!-- first section -->
 
-<div class=" mt-10 mx-auto text flex flex-col items-center justify-center">
-  <h1 class="font-bold font-mono text-2xl">NEW COLLECTION</h1>
-  <p class="pt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam autem perspiciatis deserunt quis </p>
-  <div class="flex flex-row gap-7 justify-center items-center my-5">
-     <img src="images/shades (39).jpg" alt="" class="w-[300px] h-64 object-cover">
-     <img src="images/shades (34).jpg" alt="" class="w-[300px] h-64 object-cover">
-     <img src="images/shades (40).jpg" alt="" class="w-[300px] h-64 object-cover">
+<div class="section w-full mx-auto px-5 mt-10 text-center flex flex-col items-center justify-center">
+  <h1 class="font-bold font-mono text-2xl  text-center">NEW COLLECTION</h1>
+  <p class="pt-2 text-xs md:text-base text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam autem perspiciatis deserunt quis </p>
+  <div class="flex flex-row gap-3 md:gap-7 justify-center items-center my-5">
+     <img src="images/shades (39).jpg" alt="" class="w-28 h-32 sm:w-36 sm:h-44 md:w-[300px] md:h-64 object-cover">
+     <img src="images/shades (34).jpg" alt="" class="w-28 h-32 sm:w-36 sm:h-44 md:w-[300px] md:h-64 object-cover">
+     <img src="images/shades (40).jpg" alt="" class="w-28 h-32 sm:w-36 sm:h-44 md:w-[300px] md:h-64 object-cover">
   </div>
  
 </div>
@@ -88,40 +79,41 @@
 <!-- second section -->
 
 <div
-class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
+class="section w-full mx-auto mt-24 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 >
-<div class="relative">
+<div class="relative max-w-full">
   <img
     src="images/shades (12).jpg"
-    class="aboutImg h-[450px] w-[350px]  object-cover shadow-xl"
+    class=" hidden md:flex aboutImg w-[200px]  md:h-[450px] md:w-[350px]  object-cover shadow-xl"
     alt=""
   />
+  <img src="images/shades (12).jpg" alt="" class="md:hidden w-40 h-96 min-w-full object-cover">
  
 </div>
-<div class="relative w-[380px]  space-y-3">
+<div class="relative w-full md:w-[380px] px-4 space-y-3">
   <h1 class="text-5xl font-semibold font-sans">
    Best Fashion <br> Since 2014
   </h1>
-  <p class="">
-    <p class="">Step into a world of style and luxury. </p>
-    Your destination for stylish, high quality and affordable eyeglasses for every occasion. Discover
-    your perfect pair today Lorem, ipsum dolor.!
-    <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat saepe enim nemo deserunt earum quis, optio distinctio aliquid molestias sed minima iusto, voluptatum blanditiis error fugiat cupiditate est Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  <p class="text-sm md:text-base">
+    <p class="text-sm md:text-base">Step into a world of style and luxury. </p>
+   <span class="text-sm md:text-base">Your destination for stylish, high quality and affordable eyeglasses for every occasion. Discover
+    your perfect pair today Lorem, ipsum dolor.!</span> 
+    <p class="pb-5 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat saepe enim nemo deserunt earum quis, optio distinctio aliquid molestias sed minima iusto, voluptatum blanditiis error fugiat cupiditate est Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       </p> 
   </p>
   
-<div class="absolute z-10 right-[100px] flex justify-center items-center my-4">
-  <div class="flex flex-row text-center justify-center items-center bg-white shadow-2xl p-4 px-10 w-[400px]">
+<div class="absolute z-10 md:right-[100px] flex justify-center items-center my-4 mx-auto ">
+  <div class="flex flex-row text-center justify-center items-center bg-white shadow-2xl p-4 px-10 w-[340px] md:w-[400px]">
     <span class="text-center font-semibold px-8 border-r-4 ">
-      <h1 class="text-[25px] font-sans">2014</h1>
+      <h1 class="text-[19px] md:text-[25px] font-sans">2014</h1>
       <p class="text-sm">Lorem</p>
     </span>
      <span class="text-center font-semibold px-8 border-r-4">
-      <h1 class="text-[25px] font-sans">8900+</h1>
+      <h1 class="text-[19px] md:text-[25px] font-sans">8900+</h1>
       <p class="text-sm">Lorem</p>
     </span> 
     <span class="text-center font-semibold px-8 ">
-      <h1 class="text-[25px] font-sans">3105+</h1>
+      <h1 class="text-[19px] md:text-[25px] font-sans">3105+</h1>
       <p class="text-sm">Lorem</p>
     </span>
     
@@ -138,8 +130,9 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
 <!-- third section -->
 
-<div class="mt-32 bg-amber-700 text-white opacity-80 flex flex-row gap-6 p-14 pb-20 mb-10 px-12 ">
-  <div class=" w-[370px]  space-y-3">
+<div class="section mt-40 md:mt-32 bg-amber-700 text-white opacity-80 flex flex-col md:flex-row gap-6 py-14 px-6
+ md:p-14 pb-20 mb-10 md:px-12 ">
+  <div class="w-full md:w-[370px]  space-y-3">
     <h1 class="text-5xl font-semibold font-sans">
      Best Seller <br> Products
     </h1>
@@ -151,10 +144,69 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
       earum quis, optio distinctio aliquid molestias sed minima iusto,  elit. 
        </p>
     </p>
-    <button class="border border-white rounded p-2.5 mt-2 px-10 text-white">
+    <button class="border border-white rounded p-2.5 mt-2 px-10 text-white hover:bg-white hover:text-black transition-all">
       <span class="text-sm">SEE MORE</span>
     </button>
   </div>
+
+  
+<div class="horizontal_slider">
+  <div class="slider_container">
+    <div class="item">
+      <figure>
+        <img src="images/shades (41).jpg" alt="" class="w-60 h-52 md:w-80 md:h-60 object-cover">
+       <figcaption class="bg-white text-black text-xs md:text-sm pl-6 p-3 pb-5">
+         <ul>
+           <li class="text-xs">⭐⭐⭐⭐⭐</li>
+           <li class="font-semibold text-base">Vintage Sunglases</li>
+           <li class=""><del>$20</del> $10</li>
+         </ul>
+ 
+       </figcaption>
+     </figure> 
+    </div>
+    <div class="item">
+       
+
+<figure>
+  <img src="images/shades (19).jpg" alt="" class="w-60 h-52 md:w-80 md:h-60 object-cover">
+ <figcaption class="bg-white text-black text-xs md:text-sm pl-6 p-3 pb-5">
+   <ul>
+     <li class="text-xs">⭐⭐⭐⭐⭐</li>
+     <li class="font-semibold text-base">Vintage Sunglases</li>
+     <li class=""><del>$20</del> $10</li>
+   </ul>
+
+ </figcaption>
+</figure> 
+
+
+    </div>
+    <div class="item">
+     
+
+      <figure>
+        <img src="images/shades (38).jpg" alt="" class="w-60 h-52 md:w-80 md:h-60 object-cover">
+       <figcaption class="bg-white text-black text-xs md:text-sm pl-6 p-3 pb-5">
+         <ul>
+           <li class="text-xs">⭐⭐⭐⭐⭐</li>
+           <li class="font-semibold text-base">Vintage Sunglases</li>
+           <li class=""><del>$20</del> $10</li>
+         </ul>
+ 
+       </figcaption>
+     </figure>
+    
+    </div>
+    
+  </div>
+
+  <!----------------------<p class="flex flex-row justify-center items-center gap-3 text-2xl">
+<b class="cursor-pointer opacity-70 hover:opacity-100"> &#x2190; </b> 
+<b class="cursor-pointer opacity-70  hover:opacity-100"> &#x2192; </b>
+</p>----------->
+</div>
+<!-- 
 
   <div class="flex flex-row gap-4 w-full overflow-hidden">
     <figure>
@@ -196,22 +248,21 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
       </figcaption>
     </figure>
    
-  </div>
+  </div> -->
 
 </div>
 
-
 <!-- designers -->
 
-<div class="mt-20 mx-10">
+<div class="section mt-20 mx-2 md:mx-10">
   <h2 class="ont-mono font-bold ">NEW ON SPECS</h2>
   <h1 class="font-mono font-bold text-2xl">DESIGNER EYEGLASSES</h1>
-  <div class="pb-4 flex flex-row justify-between">
-    <span class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, voluptatibus?</span>
+  <div class="pb-4 flex flex-row gap-10 md:gap-0 justify-between">
+    <span class="text-xs md:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, voluptatibus?</span>
     <span class="">
       <ul class="flex flex-row gap-3 text-sm">
-        <li class=" text-white bg-opacity-65 bg-black hover:bg-opacity-100  p-1 px-2.5 text-center cursor-pointer"> &#8592; </li>
-        <li class="text-white bg-opacity-65 bg-black hover:bg-opacity-100 p-1 px-2.5 text-center cursor-pointer"> &#8594; </li>
+        <li class=" text-xs md:text-base text-white bg-opacity-65 bg-black hover:bg-opacity-100  p-0.5 md:p-1 px-2 md:px-2.5 text-center cursor-pointer"> &#8592; </li>
+        <li class="text-xs md:text-base text-white bg-opacity-65 bg-black hover:bg-opacity-100 p-0.5 md:p-1 px-2 md:px-2.5 text-center cursor-pointer"> &#8594; </li>
           <!--  bg-black opacity-75 hover:opacity-100 text-white -->
       </ul>
     </span>
@@ -267,122 +318,275 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 <!-- fourth section -->
 
 
-<div class="mt-24 mx-auto text flex flex-col items-center justify-center">
-  <h1 class="font-mono font-bold text-2xl">OUR COLLECTION</h1>
-  <ul class="flex flex-row gap-4 pt-2 uppercase text-sm">
-    <li class="cursor-pointer">All</li>
-    <li class="cursor-pointer">Trending now</li>
-    <li class="cursor-pointer">Shades</li>
-    <li class="cursor-pointer">New Arrivals</li>
-  </ul>
-
-  <div class="flex flex-wrap mx-14 gap-3 justify-center mt-5">
-   <figure>
-     <img src="images/shades (73).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   <figure>
-     <img src="images/shades (36).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   <figure>
-     <img src="images/shades (35).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   <figure>
-     <img src="images/shades (32).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-  
-   <figure>
-     <img src="images/shades (33).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-    
-   <figure>
-     <img src="images/shades (85).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   <figure>
-     <img src="images/shades (27).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   <figure>
-     <img src="images/shades (50).jpg" alt="" class="w-60 h-64 object-cover">
-     <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
-      <ul>
-        <li class="text-xs">⭐⭐⭐⭐⭐</li>
-        <li class="font-semibold text-base">Vintage Sunglases</li>
-        <li class=""><del>$20</del> $10</li>
-      </ul>
-
-    </figcaption>
-   </figure>
-   
-   
+<div class="section operations ">
+  <div class="flex flex-col justify-center mx-auto text-center">
+    <h1 class="font-mono font-bold text-2xl pb-5">OUR COLLECTION</h1>
   </div>
+  
+<div class="operations__tab-container flex flex-row gap-4 uppercase justify-center mx-auto">
+<button class="btn operations__tab operations__tab--1 operations__tab--active"  data-tab="1">
+  <span class="text-xs md:text-sm uppercase">Featured</span>
+</button>
+<button class="btn operations__tab operations__tab--2" data-tab="2">
+  <span class="text-xs md:text-sm uppercase">Trending now</span>
+</button>
+<button class="btn operations__tab operations__tab--3" data-tab="3">
+  <span class="text-xs md:text-sm uppercase">Exclusive</span>
+</button>
+
+</div>
+
+<div class="operations__content operations__content--1 operations__content--active">
+  <div class="flex flex-wrap mx-14 gap-3 justify-center mt-5">
+    <figure>
+      <img src="images/shades (73).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (36).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (35).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (32).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+   
+    <figure>
+      <img src="images/shades (33).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+     
+    <figure>
+      <img src="images/shades (85).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (27).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (50).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    
+   </div>
+
+   </div>
+   
+  
+  <div class="operations__content operations__content--2">
+    <div class="flex flex-wrap mx-14 gap-3 justify-center mt-5">
+ 
+
+    <figure>
+      <img src="images/shades (30).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+   
+    <figure>
+      <img src="images/shades (16).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+   
+    <figure>
+      <img src="images/shades (53).jpg" alt="" class="w-60 h-64 ">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+      
+    <figure>
+      <img src="images/shades (77).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+  
+   </div>
+  
+  </div>
+
+  
+   <div class="operations__content operations__content--3">
+    <div class="flex flex-wrap mx-14 gap-3 justify-center mt-5">
+   
+      
+    <figure>
+      <img src="images/shades (75).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+   
+    <figure>
+      <img src="images/shades (72).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (79).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+   
+    <figure>
+      <img src="images/shades (31).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+     
+    <figure>
+      <img src="images/shades (69).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="images/shades (29).jpg" alt="" class="w-60 h-64 object-cover">
+      <figcaption class="bg-white text-black text-sm text-center p-3 pb-5">
+       <ul>
+         <li class="text-xs">⭐⭐⭐⭐⭐</li>
+         <li class="font-semibold text-base">Vintage Sunglases</li>
+         <li class=""><del>$20</del> $10</li>
+       </ul>
+ 
+     </figcaption>
+    </figure>
+  
+   </div>
+  
+  </div>
+
+
 </div>
 
 
 
 <!-- fifth section -->
 
-<div class=" bg-amber-600  mt-20  bg-opacity-60 flex flex-row gap-20 justify-center">
-  <div class=" w-[500px] pl-16 space-y-3 p-10 pt-20 px-10">
+<div class="section  bg-amber-600  mt-20 w-full mx-auto bg-opacity-60 flex flex-row gap-20 justify-center">
+  <div class="w-full md:w-[500px] pl-16 space-y-3 p-10 pt-20 px-10">
     <h1 class="text-5xl font-semibold font-sans">
      Deal Of The Day
     </h1>
@@ -396,17 +600,17 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
     </p>
     <div class="flex flex-row gap-6 pb-8 pt-4">
       <div class="bg-white p-3 text-center flex flex-col px-6">
-        <span class="text-[45px] font-bold">03</span>
+        <span class="text-[40px] md:text-[45px] font-bold">03</span>
         <span class="text-sm">Hours</span>
       </div>
 
       <figure class="bg-white p-3 text-center flex flex-col px-6">
-        <span class="text-[45px] font-bold">08</span>
+        <span class="text-[40px] md:text-[45px] font-bold">08</span>
         <span class="text-sm">Minutes</span>
       </figure>
 
       <figure class="bg-white p-3 text-center flex flex-col px-6">
-        <span class="text-[45px] font-bold">19</span>
+        <span class="text-[40px] md:text-[45px] font-bold">19</span>
         <span class="text-sm">Seconds</span>
       </figure>
     </div>
@@ -426,7 +630,7 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
 
 <!-- sixth section -->
-<div class="tryBg mb-20  mx-auto flex flex-row justify-center ">
+<div class=" tryBg mb-20  mx-auto flex flex-row justify-center ">
   <div class="w-[2000px]  flex flex-row justify-center gap-5">
 
 <div class="flex flex-row justify-start items-end ">
@@ -438,14 +642,14 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
 <div class="absolute z-10 right-[340] w-[440px] ">
 
-  <img src="images/shades (88).jpg" alt="" class="w-[350px] object-cover opacity-85 h-[275px]">
+  <img src="images/shades (88).jpg" alt="" class="hidden lg:flex w-[350px] object-cover opacity-85 h-[275px]">
  
 </div>
 </div>
 
 <div class="w-[350px] pt-[69px]">
   <h1 class="font-bold text-[25px] font-mono">TRY BEFORE YOU BUY</h1>
- <h2 class="text-[15px]">See how your favorite frames looks on you! Use our Virtual Try-On feature to find the perfect pair. Upload a photo or use your webcam to ger started.</h2>
+ <h2 class="text-[15px]">See how your favorite frames looks on you! Use our Virtual Try-On feature to find the perfect pair. Upload a photo or use your webcam to get started.</h2>
  <button class=" bg-black rounded p-2.5 mt-5 px-10 text-white">
    <span class="text-sm">TRY IT NOW</span>
  </button>
@@ -458,17 +662,17 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
 <!-- seventh section -->
 
-<div class="mt-36 text-center flex flex-col justify-center mb-20">
+<div class="section mt-36 text-center flex flex-col justify-center mb-20">
 <h1 class="text-2xl font-mono font-bold">WHAT PEOPLE SAY ABOUT US</h1>
-<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nemo!</p>
-
-<div class="flex flex-row gap-7 justify-center mx-auto items-center">
-  <div class="border-2 border-black items-center text-center p-2 px-4 rounded-full h-fit w-fit text-2xl opacity-70 hover:opacity-100">
+<p class="text-sm md:text-base px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nemo!</p>
+<div class="slider">
+<!-- <div class="slider flex flex-row gap-4 md:gap-7 justify-center mx-auto items-center"> -->
+  <!-- <div class="slider__btn--right border-2 border-black items-center text-center p-2 px-4 rounded-full h-fit w-fit text-xl md:text-2xl opacity-70 hover:opacity-100">
  &#8592;
-  </div>
-
-<div class="bg-amber-600 bg-opacity-25  flex flex-col justify-center  mt-6 p-6 w-[350px] px-7 ">
-  <h2 class="font-semibold pb-2">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+  </div> -->
+<!-- 
+<div class="slide bg-amber-600 bg-opacity-25  flex flex-col justify-center  mt-6 p-6 w-[220px] md:w-[350px] px-7 ">
+  <h2 class="font-semibold pb-2 text-xs md:base">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
   <q class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam perferendis excepturi rem pariatur sunt soluta minima expedita id, molestiae sint</q>
   <img src="images/shades (1).jpg" alt="" class="w-14 h-14 mx-auto rounded-full object-cover mt-4">
   <p class="font-semibold">fskdfn wjnfsa</p>
@@ -476,8 +680,8 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 </div>
 
 
-<div class="bg-amber-600 bg-opacity-25  flex flex-col justify-center  mt-6 p-6 w-[350px] px-7 ">
-  <h2 class="font-semibold pb-2">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+<div class="slide md:flex bg-amber-600 bg-opacity-25 flex-col justify-center  mt-6 p-6 w-[350px] px-7 ">
+  <h2 class="font-semibold pb-2 text-xs md:base">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
   <q class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam perferendis excepturi rem pariatur sunt soluta minima expedita id, molestiae sint</q>
   <img src="images/shades (1).jpg" alt="" class="w-14 h-14 mx-auto rounded-full object-cover mt-4">
   <p class="font-semibold">fskdfn wjnfsa</p>
@@ -485,17 +689,27 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 </div>
 
 
-<div class="bg-amber-600 bg-opacity-25  flex flex-col justify-center  mt-6 p-6 w-[350px] px-7 ">
-  <h2 class="font-semibold pb-2">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+<div class="slide md:flex bg-amber-600 bg-opacity-25 flex-col justify-center  mt-6 p-6 w-[350px] px-7 ">
+  <h2 class="font-semibold pb-2 text-xs md:base">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
   <q class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam perferendis excepturi rem pariatur sunt soluta minima expedita id, molestiae sint</q>
   <img src="images/shades (1).jpg" alt="" class="w-14 h-14 mx-auto rounded-full object-cover mt-4">
   <p class="font-semibold">fskdfn wjnfsa</p>
   <p class="text-sm">fjswad</p>
-</div>
+</div> -->
 
+
+  
+<div class="slide"><img src="images/shades (13).jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="images/shades (15).jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="images/shades (17).jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="images/shades (19).jpg" alt="Photo 4" /></div>
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+<!-- 
 <div class="border-2 border-black items-center text-center p-2 px-4 rounded-full h-fit w-fit text-2xl opacity-70 hover:opacity-100">
   &#8594;
-   </div>
+   </div> -->
 </div>
 
 </div>
@@ -503,34 +717,34 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
 <!-- gallery -->
 
-<div class="flex flex-col mt-32 ">
+<div class="section flex flex-col mt-32 mx-0 w-full">
 <div class=" flex flex-row justify-center relative">
 
-<img src="images/shades (78).jpg" alt="" class="w-[300px] h-60 object-cover">
-<img src="images/shades (5).jpg" alt="" class="w-[300px] h-60 object-cover">
-<img src="images/shades (93).jpg" alt="" class="w-[300px] h-60 object-cover">
-<img src="images/shades (23).jpg" alt="" class="w-[300px] h-60 object-cover">
-<img src="images/shades (91).jpg" alt="" class="w-[300px] h-60 object-cover">
-<img src="images/shades.jpg" alt="" class="w-[300px] h-60 object-cover">
+<img src="images/shades (78).jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
+<img src="images/shades (5).jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
+<img src="images/shades (93).jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
+<img src="images/shades (23).jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
+<img src="images/shades (91).jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
+<img src="images/shades.jpg" alt="" class="w-16 md:w-[300px] md:h-60 object-cover">
 
 
 
 <div class="absolute z-10 w-fit bg-white -bottom-5 p-3 px-5">
-<h4 class="tex-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+<h4 class="text-xs md:tex-sm">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
 </div>
 </div>
 
 
-<div class="bg-amber-700 opacity-80 p-10 pt-20 text-white flex flex-col justify-center">
+<div class="bg-amber-700 opacity-80 py-10 px-4 md:px-10 pt-20 text-white flex flex-col justify-center">
   <ul class="flex flex-row gap-5 uppercase text-center mx-auto">
-    <li class="cursor-pointer">HOME</li>
-    <li class="cursor-pointer">About</li>
-    <li class="cursor-pointer">Best Seller</li>
-    <li class="cursor-pointer">Products</li>
-    <li class="cursor-pointer">Reviews</li>
+    <li class="text-xs md:text-base cursor-pointer">HOME</li>
+    <li class="text-xs md:text-base cursor-pointer">About</li>
+    <li class="text-xs md:text-base cursor-pointer">Best Seller</li>
+    <li class="text-xs md:text-base cursor-pointer">Products</li>
+    <li class="text-xs md:text-base cursor-pointer">Reviews</li>
   </ul>
 
-  <ul class="mx-auto pt-7">
+  <ul class="mx-auto pt-7 py-5">
     <li class="">Lorem ipsum dolor sit.</li>
   </ul>
 </div>
@@ -539,6 +753,8 @@ class="mt-32 mb-16 flex flex-col md:flex-row gap-10 justify-center "
 
       <!-- ---------------------- -->
     </div>
+
+    <script src="shade.js"></script>
   </body>
 </html>
 
